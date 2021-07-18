@@ -1,0 +1,18 @@
+url: "https://funeoz.github.io"
+baseurl: "" 
+
+sass:
+  sass_dir: _sass
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+paginate: 5
+paginate_path: "/page:num/"

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    <main class="page-content" aria-label="Content">
+        <div class="columns is-gapless is-tablet">
+            <div id="left-side" class="column is-one-quarter has-text-centered">
+                {% include left-panel.html %}
+            </div>
+            <div class="column" id="right-side">
+                <div class="wrapper">
+                    {{ content }}
+                </div>
+                {% include footer.html %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

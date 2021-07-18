@@ -1,0 +1,23 @@
+<div class="tile is-child box">
+    <p class="title is-5">{{ include.name }}</p>
+    <p>{{ include.description }}</p>
+    <figure class="image">
+        <img src="{{ include.image_url }}">
+    </figure>
+    <div class="buttons">
+        <a href="{{ include.button1_link }}" class="button is-rounded is-primary">
+            <span class="icon">
+                <i class="{{ include.button1_icon }}"></i>
+            </span>
+            <span>{{ include.button1_desc }}</span>
+        </a>
+        {% if include.button2_link %}
+        <a href="{{ include.button2_link }}" class="button is-rounded is-primary">
+            <span class="icon">
+                <i class="{{ include.button2_icon }}"></i>
+            </span>
+            <span>{{ include.button2_desc }}</span>
+        </a>
+        {% endif %}
+    </div>
+</div>

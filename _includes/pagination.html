@@ -1,0 +1,35 @@
+<nav class="pagination is-centered" role="navigation">
+    {% if paginator.page == 2 %}
+    <a class="pagination-previous" href="/">Previous</a>
+    {% elsif paginator.page == 1 %}
+    {% else %}
+    <a class="pagination-previous" href="/page{{ paginator.previous_page }}/index.html">Previous</a>
+    {% endif %}
+    {% unless paginator.page == paginator.total_pages %}
+    <a class="pagination-next" href="/page{{ paginator.next_page}}/index.html">Next page</a>
+    {% endunless %}
+    <ul class="pagination-list">
+        {% unless paginator.page == 1 %}
+        {% unless paginator.page == 2 %}
+        <li><a class="pagination-link" href="/">1</a></li>
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        {% endunless %}
+        {% if paginator.previous_page == 1 %}
+        <li><a class="pagination-link" href="/">{{ paginator.previous_page }}</a></li>
+        {% else %}
+        <li><a class="pagination-link" href="/page{{ paginator.previous_page }}/index.html">{{ paginator.previous_page
+                }}</a></li>
+        {% endif %}
+        {% endunless %}
+        <li><a class="pagination-link is-current">{{ paginator.page }}</a></li>
+        {% unless paginator.page == paginator.total_pages %}
+        <li><a class="pagination-link" href="/page{{ paginator.next_page }}/index.html">{{
+                paginator.next_page}}</a></li>
+        {% unless paginator.next_page == paginator.total_pages %}
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        <li><a class="pagination-link" href="/page{{paginator.total_pages }}/index.html">{{ paginator.total_pages }}</a>
+            {% endunless %}
+            {% endunless %}
+        </li>
+    </ul>
+</nav>

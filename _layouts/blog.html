@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="post-header">
+    <section class="hero" style="box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);">
+        <div class="hero-body">
+            <h1 class="title is-2">{{ page.title }}</h1>
+        </div>
+    </section>
+</header>
+
+{% for post in paginator.posts %}
+<div class="card blog-card">
+    {% if post.image %}
+    <div class="card-image">
+        <figure class="image is-16by9">
+            <img src="{{ post.image }}">
+        </figure>
+    </div>
+    {% endif %}
+    <div class="card-content">
+        <a class="title is-4" href="{{ post.url }}">{{ post.title }}</a>
+        <span class="icon-text">
+            <span class="icon">
+                <i class="fas fa-user-edit"></i>
+            </span>
+            <span>Funeoz</span>
+            <span class="icon">
+                <i class="fas fa-calendar"></i>
+            </span>
+            <span>{{ post.date | slice: 0,10 }}</span>
+        </span>
+        <p>{{ post.description }}</p>
+    </div>
+    <footer class="card-footer">
+        <a href="{{ post.url }}" class="card-footer-item">Read more</a>
+    </footer>
+</div>
+{% endfor %}
+
+{% include pagination.html %}
