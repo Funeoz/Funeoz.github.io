@@ -30,6 +30,10 @@ div.wrapper {
     position: sticky;
 }
 
+.post-content {
+    font-family: 'Merriweather', serif;
+}
+
 @media screen and (max-width: $tablet) {
     .panel, #left-side {
         height: 75vh !important;
@@ -41,12 +45,15 @@ div.wrapper {
     .blog-card {
         margin: 2rem 0;
     }
+    #sidebar-icons {
+        display: none;
+    }
+    .post-content {
+        padding: 2rem;
+    }
 }
 
 @media screen and (min-width: $tablet) {
-    #mobile-scroll-down, #mobile-scroll-up {
-        display: none;
-    }
     .blog-card {
         margin: 2rem 6rem;
     }
@@ -56,6 +63,16 @@ div.wrapper {
     }
     html {
         scrollbar-width: none;
+    }
+    #menuToggle {
+        display: none !important;
+    }
+    .post-content {
+        padding: 3rem 10rem;
+    }
+    .post-content > p {
+        max-width: 50ch;
+        
     }
 }
 
@@ -67,7 +84,9 @@ div.wrapper {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
+
 
 a.panel-buttons {
     margin: 0.5em 0em;
@@ -81,21 +100,15 @@ a.panel-buttons {
     color: white;
 }
 
-nav.level {
+section.hero {
+    background-color: ghostwhite; 
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
-    padding: 1rem;
-    background-color: $footer-background-color;
 }
-
-
 div.hero-foot {
     padding-left: 1.5rem;
 }
 
-.post-content {
-    padding: 3rem 6rem;
-    text-align: justify;
-}
+
 
 pre {
     text-align: left;

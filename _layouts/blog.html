@@ -3,11 +3,7 @@ layout: default
 ---
 
 <header class="post-header">
-    <section class="hero" style="box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);">
-        <div class="hero-body">
-            <h1 class="title is-2">{{ page.title }}</h1>
-        </div>
-    </section>
+    {% include hero.html %}
 </header>
 
 {% for post in paginator.posts %}
