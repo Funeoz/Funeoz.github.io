@@ -64,6 +64,10 @@ div.wrapper {
     html {
         scrollbar-width: none;
     }
+    html::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome/Safari/Webkit */
+    }
     #menuToggle {
         display: none !important;
     }
@@ -74,6 +78,7 @@ div.wrapper {
         max-width: 50ch;
         
     }
+
 }
 
 .panel {
@@ -108,8 +113,6 @@ div.hero-foot {
     padding-left: 1.5rem;
 }
 
-
-
 pre {
     text-align: left;
 }
@@ -138,4 +141,17 @@ a.pagination-link, a.pagination-next, a.pagination-previous{
 a.pagination-link.is-current {
     background-color: $primary;
     border-color: $primary;
+}
+
+#skills-list {
+    list-style-type: none;
+}
+
+.title-about {
+    margin: 1rem;
+}
+
+.share-btn:hover {
+    color: white;
+    opacity: 0.8;
 }

@@ -1,0 +1,26 @@
+<div class="buttons">
+    <a href="http://twitter.com/share?url={{ site.url | append: page.url }}" target="_blank"
+        class="share-btn button is-medium is-rounded" style="background: #55ACEE; color: white">
+        <span class="icon is-large">
+            <i class="fab fa-twitter"></i>
+        </span>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | append: page.url }}" target="_blank"
+        class="share-btn is-medium button is-rounded" style="background: #3B5998; color: white">
+        <span class="icon is-large">
+            <i class="fab fa-facebook"></i>
+        </span>
+    </a>
+    <a href="https://www.reddit.com/submit?url={{ site.url | append: page.url }}&title={{ page.title }}" target="_blank"
+        class="share-btn is-medium button is-rounded" style="background: #ff4500; color: white">
+        <span class="icon is-large">
+            <i class="fab fa-reddit-alien"></i>
+        </span>
+    </a>
+    <a href="mailto:?body={{ site.url | append: page.url }}" class="share-btn is-medium button is-rounded"
+        style="background: green; color: white">
+        <span class="icon is-large">
+            <i class="fas fa-envelope"></i>
+        </span>
+    </a>
+</div>
