@@ -1,5 +1,7 @@
 url: "https://funeoz.github.io"
+title: "Funeoz's blog"
 baseurl: "" 
+description: "My blog about software development, cybersecurity and more..."
 
 sass:
   sass_dir: _sass
