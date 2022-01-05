@@ -3,24 +3,18 @@ layout: page
 title: Search
 ---
 
-<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-<script>
-    SimpleJekyllSearch({
-        searchInput: document.getElementById('searchInput'),
-        resultsContainer: document.getElementById('resultsContainer'),
-        json: '/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        fuzzy: false,
-    })
-</script>
-
-<div class="field has-addons">
-    <div class="control is-expanded">
-        <input id="searchInput" class="input is-primary" type="text" placeholder="Find an article">
-    </div>
+<div id="search-box">
+    <!-- SearchBox widget will appear here -->
 </div>
 
-<div id="resultsContainer">
-
+<div id="hits">
+    <!-- Hits widget will appear here -->
 </div>
+
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/instantsearch.js@latest/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/instantsearch.js@latest/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch.umd.js"></script>
+<script src="assets/js/search.js"></script>

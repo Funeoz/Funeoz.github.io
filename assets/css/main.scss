@@ -8,7 +8,6 @@ $button-ghost-hover-decoration: none;
 $table-head-cell-border-width: 2px solid;
 $table-foot-cell-border-width: 2px solid;
 
-
 @import "bulma";
 
 html, body, .columns, #left-side, #right-side {
@@ -54,7 +53,7 @@ div.wrapper {
 }
 
 @media screen and (min-width: $tablet) {
-    .blog-card {
+    .blog-card, #search-box, #hits {
         margin: 2rem 6rem;
     }
     #right-side {
@@ -163,4 +162,8 @@ a.pagination-link.is-current {
 
 #disqus_thread {
     margin: 0 1rem;
+}
+
+.ais-search-box {
+    max-width: none !important;
 }

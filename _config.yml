@@ -16,6 +16,11 @@ kramdown:
   input: GFM
 highlighter: rouge
 
+algolia:
+  application_id: LC80RD7JKK
+  index_name: jekyll
+  files_to_exclude: [projects.html, about.html, search.html, index.html]
+
 paginate: 5
 paginate_path: "/page:num/"
 
