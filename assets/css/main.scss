@@ -53,7 +53,7 @@ div.wrapper {
 }
 
 @media screen and (min-width: $tablet) {
-    .blog-card, #search-box, #hits {
+    .blog-card, #searchbar, #hits {
         margin: 2rem 6rem;
     }
     #right-side {
@@ -164,6 +164,17 @@ a.pagination-link.is-current {
     margin: 0 1rem;
 }
 
+#searchbar {
+    display: flex;
+}
+
+#search-box {
+    width: 100%;
+}
 .ais-search-box {
     max-width: none !important;
+}
+.submit-search {
+    margin-left: .5rem;
+    height: 45px;
 }

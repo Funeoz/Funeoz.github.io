@@ -21,5 +21,20 @@
             policyLink: "https://www.cookiesandyou.com/"
         });
     </script>
+    {% if page.layout == "post" and page.lang == "fr" or page.lang == "en" %}
+    {% assign posts=site.posts | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% if page.lang == "fr" %}
+    {% assign post=posts[0] %}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ post.url }}" />
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ post.url }}" />
+    {% endif %}
+    {% if page.lang == "en" %}
+    {% assign post=posts[1] %}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ post.url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}" />
+    {% endif %}
+    {% endif %}
     {% include metadata.html %}
 </head>

@@ -12,7 +12,10 @@ search.addWidget(
     instantsearch.widgets.searchBox({
         container: '#search-box',
         placeholder: 'Search for articles',
-        poweredBy: true
+        showSubmit: true,
+        searchAsYouType: false,
+        poweredBy: true,
+        searchOnEnterKeyPressOnly: true,
     })
 );
 
@@ -47,4 +50,16 @@ search.addWidget(
         }
     })
 );
+
+function onSubmitClick() {
+    let query = new URLSearchParams(window.location.search).get("query");
+    search.helper.setQuery(query).search();
+};
+
+let submitButton = document.createElement("button");
+submitButton.innerHTML = "Submit";
+submitButton.onclick = onSubmitClick;
+submitButton.className = "button is-primary submit-search";
+document.getElementById("searchbar").appendChild(submitButton);
+
 search.start();

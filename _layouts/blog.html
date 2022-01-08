@@ -7,6 +7,7 @@ layout: default
 </header>
 
 {% for post in paginator.posts %}
+{% if post.lang == "en" %}
 <div class="card blog-card">
     {% if post.image %}
     <div class="card-image">
@@ -25,7 +26,7 @@ layout: default
             <span class="icon">
                 <i class="fas fa-calendar"></i>
             </span>
-            <span>{{ post.date | slice: 0,10 }}</span>
+            <span>{{ post.date | date: '%d %B %Y' }}</span>
         </span>
         <p>{{ post.description }}</p>
     </div>
@@ -33,6 +34,7 @@ layout: default
         <a href="{{ post.url }}" class="card-footer-item">Read more</a>
     </footer>
 </div>
+{% endif %}
 {% endfor %}
 
 {% include pagination.html %}
