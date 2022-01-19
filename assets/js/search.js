@@ -1,17 +1,16 @@
 const search = instantsearch({
-    // TODO: enter our own algolia credentials here
     indexName: "jekyll",
     searchClient: algoliasearch(
-        'LC80RD7JKK',
-        '26894f1f5794a11c59397f11b2bcba7f'
+        "LC80RD7JKK",
+        "26894f1f5794a11c59397f11b2bcba7f"
     ),
-    routing: true
+    routing: true,
 });
 
 search.addWidget(
     instantsearch.widgets.searchBox({
-        container: '#search-box',
-        placeholder: 'Search for articles',
+        container: "#search-box",
+        placeholder: "Search for articles",
         showSubmit: true,
         searchAsYouType: false,
         poweredBy: true,
@@ -21,9 +20,9 @@ search.addWidget(
 
 search.addWidget(
     instantsearch.widgets.hits({
-        container: '#hits',
+        container: "#hits",
         templates: {
-            empty: 'No results',
+            empty: "No results",
             item: function (hit) {
                 return `
                 <div class="card blog-card">
@@ -46,20 +45,20 @@ search.addWidget(
                     </footer>
                 </div>
                 `;
-            }
-        }
+            },
+        },
     })
 );
 
-function onSubmitClick() {
-    let query = new URLSearchParams(window.location.search).get("query");
-    search.helper.setQuery(query).search();
-};
-
-let submitButton = document.createElement("button");
+const submitButton = document.createElement("button");
 submitButton.innerHTML = "Submit";
 submitButton.onclick = onSubmitClick;
 submitButton.className = "button is-primary submit-search";
 document.getElementById("searchbar").appendChild(submitButton);
+
+function onSubmitClick() {
+    let query = new URLSearchParams(window.location.search).get("query");
+    search.helper.setQuery(query).search();
+}
 
 search.start();

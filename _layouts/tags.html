@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<div class="content">
+    <div class="snippets">
+        <ul>
+            {% for post in site.posts %}
+            {% if post.tags contains page.tag-name %}
+            <li>{{ post.date | date : '%d %B %Y' }} - <a href="{{post.url}}">{{ post.title }} </a></li>
+            {% endif %}
+            {% endfor %}
+            <li><a href="{{ site.baseurl }}/tags">See all tags</a></li>
+        </ul>
+    </div>
+</div>

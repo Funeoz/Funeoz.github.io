@@ -2,7 +2,7 @@
 ---
 
 $primary: #17252a;
-$button-ghost-color : white;
+$button-ghost-color: white;
 $button-ghost-hover-color: #17252a;
 $button-ghost-hover-decoration: none;
 $table-head-cell-border-width: 2px solid;
@@ -10,9 +10,13 @@ $table-foot-cell-border-width: 2px solid;
 
 @import "bulma";
 
-html, body, .columns, #left-side, #right-side {
+html,
+body,
+.columns,
+#left-side,
+#right-side {
     height: 100vh;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -30,11 +34,12 @@ div.wrapper {
 }
 
 .post-content {
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
 }
 
 @media screen and (max-width: $tablet) {
-    .panel, #left-side {
+    .panel,
+    #left-side {
         height: 75vh !important;
     }
     #mobile-scroll-up {
@@ -53,7 +58,9 @@ div.wrapper {
 }
 
 @media screen and (min-width: $tablet) {
-    .blog-card, #searchbar, #hits {
+    .blog-card,
+    #searchbar,
+    #hits {
         margin: 2rem 6rem;
     }
     #right-side {
@@ -75,13 +82,11 @@ div.wrapper {
     }
     .post-content > p {
         max-width: 50ch;
-        
     }
-
 }
 
 .panel {
-    background-image: linear-gradient(to top, #2e918c, #17252A);
+    background-image: linear-gradient(to top, #2e918c, #17252a);
     border-radius: 0 !important;
     height: 100vh;
     display: flex;
@@ -90,7 +95,6 @@ div.wrapper {
     align-items: center;
     position: relative;
 }
-
 
 a.panel-buttons {
     margin: 0.5em 0em;
@@ -105,7 +109,7 @@ a.panel-buttons {
 }
 
 section.hero {
-    background-color: ghostwhite; 
+    background-color: ghostwhite;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
 }
 div.hero-foot {
@@ -120,19 +124,25 @@ nav.pagination {
     margin: 2rem 6rem;
 }
 
+div.highlight {
+    margin-bottom: 1rem;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
 
     a.title {
         margin-bottom: 0;
-    }    
+    }
     span.icon-text {
         padding: 1rem 0rem;
     }
 }
 
-a.pagination-link, a.pagination-next, a.pagination-previous{
+a.pagination-link,
+a.pagination-next,
+a.pagination-previous {
     justify-content: center;
     border-color: #b5b5b5;
 }
@@ -156,7 +166,7 @@ a.pagination-link.is-current {
 }
 
 .tags > p {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     margin: 1rem 0;
 }
 
@@ -175,6 +185,6 @@ a.pagination-link.is-current {
     max-width: none !important;
 }
 .submit-search {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     height: 45px;
 }

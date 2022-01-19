@@ -2,7 +2,13 @@
     <p>
         {% if page.tags.size > 0 %}
         Tag{% if page.tags.size > 1 %}s{% endif %}:
-        {{ page.tags | sort | join: ", " }}
+        {% for tag in page.tags %}
+        {% if tag == page.tags[-1] %}
+        <a rel="tag" href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        {% else %}
+        <a rel="tag" href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }},</a>
+        {% endif %}
+        {% endfor %}
         {% endif %}
     </p>
 </div>
